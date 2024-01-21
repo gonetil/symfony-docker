@@ -16,7 +16,7 @@ with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) 
 
 ### What if symfony-cli has not been installed during image build?
 1. Run `docker exec -it symfony-docker-php-1 bash` to start bash inside the container
-    2. If Bash has not been installed either, then start sh insead of bash, and once inside the container, run `apk add --no-cache bash` to install bash inside the image  
+2. If Bash has not been installed either, then start sh insead of bash, and once inside the container, run `apk add --no-cache bash` to install bash inside the image  
 3. Run `curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash`
 4. Run `apk add symfony-cli`
 
