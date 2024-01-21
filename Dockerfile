@@ -20,6 +20,7 @@ RUN apk add --no-cache \
 		file \
 		gettext \
 		git \
+        bash \
 	;
 
 RUN set -eux; \
@@ -89,3 +90,7 @@ RUN set -eux; \
 	composer dump-env prod; \
 	composer run-script --no-dev post-install-cmd; \
 	chmod +x bin/console; sync;
+
+RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh'| bash
+
+RUN apk add symfony-cli
