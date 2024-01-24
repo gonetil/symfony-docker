@@ -1,5 +1,6 @@
 #!/bin/bash
 
-docker exec -it symfony-docker-php-1 sh -c "curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash"
-docker exec -it symfony-docker-php-1 apk add symfony-cli
-alias symfony='docker exec -it symfony-docker-php-1 symfony'
+container_name="symfony-docker-gonetil-php-1"
+docker exec -it $container_name sh -c "curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash"
+docker exec -it $container_name apk add symfony-cli
+alias symfony='docker exec -it $container_name symfony'
